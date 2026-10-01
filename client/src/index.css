@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@import "tailwindcss";
+
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;  
+}
+
+/* body {
+  max-width: 1280px; 
+  margin: 0 auto;
+  padding: 1rem;
+} */
+
+
+html{
+  font-size: 16px;
+}
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    background: white;
+  }
+
+  * {
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+
+  .print-area {
+    width: 210mm;
+    min-height: 297mm;
+    border: 1px;
+    padding: 5mm;
+    font-size: 12px;
+    color: black;
+    background: white;
+    page-break-inside: avoid;
+  }
+
+  /* Hide everything except .print-area */
+  body * {
+    visibility: hidden;
+  }
+
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+
+  .print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  /* Table row control: 20 rows per page */
+  .print-area table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .print-area table tr {
+    page-break-inside: avoid;
+    height: 30px; /* Adjust if needed */
+  }
+
+  .print-area table th,
+  .print-area table td {
+    padding: 4px;
+    font-size: 11px;
+  }
+}
+
+/* ---------- Theme variables ---------- */
+:root {
+  /* default = Clean Minimal */
+  --bg-page: #f8fafc;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --input-border: #cbd5e1;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --accent-ring: rgba(79, 70, 229, 0.15);
+  --header-bg: #ffffff;
+  --header-text: #0f172a;
+  --header-icon: #4f46e5;
+  --header-border: 1px solid #e2e8f0;
+  --radius: 8px;
+  --shadow: none;
+}
+
+:root[data-theme="corporate"] {
+  --bg-page: #eef2f7;
+  --surface: #ffffff;
+  --border: #d5dde8;
+  --input-border: #b6c3d4;
+  --text: #1e3a5f;
+  --text-muted: #4b5f78;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-ring: rgba(37, 99, 235, 0.15);
+  --header-bg: #1e3a5f;
+  --header-text: #ffffff;
+  --header-icon: #93c5fd;
+  --header-border: 1px solid #1e3a5f;
+  --radius: 6px;
+  --shadow: none;
+}
+
+:root[data-theme="modern"] {
+  --bg-page: #f1f5f9;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --input-border: #cbd5e1;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --accent: #10b981;
+  --accent-hover: #059669;
+  --accent-ring: rgba(16, 185, 129, 0.18);
+  --header-bg: #0f172a;
+  --header-text: #f8fafc;
+  --header-icon: #34d399;
+  --header-border: 1px solid #0f172a;
+  --radius: 10px;
+  --shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+body {
+  background: var(--bg-page);
+  color: var(--text);
+}
