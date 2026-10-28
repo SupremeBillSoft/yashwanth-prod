@@ -4,7 +4,7 @@ set -o pipefail # Exit if any command in a pipeline fails
 set -o nounset  # Treat unset variables as errors
 
 echo "=== Applying migrations ==="
-python manage.py migrate --noinput
+# python manage.py migrate --noinput
 
 echo "=== Collecting static files ==="
 python manage.py collectstatic --noinput

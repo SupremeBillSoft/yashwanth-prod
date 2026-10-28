@@ -12,3 +12,4 @@ media/
 nginx-bkup.conf
 nginxold.conf
 .git.old/
+*.log

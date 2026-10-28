@@ -6,7 +6,6 @@ services:
     container_name: yashwanth_api
     env_file: ./api/.env
     volumes:
-      - ./api:/app
       - static_volume:/app/static
       - media_volume:/app/media
     expose:
